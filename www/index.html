@@ -8,60 +8,141 @@
         <link href="assets/css/global.css" rel="stylesheet">
     </head>
     <body>
-        <div class="topcoat-navigation-bar">
-            <div class="topcoat-navigation-bar__item center full">
-                <span class="icon-switch nav-right"></span>
-                <h1>PaintKeeper</h1>
-                <span class="icon-add nav-left"></span>
-            </div>
-        </div>
         <div id="container">
 
         </div>
         <!-- TEMPLATES BEGIN -->
         <script id="default-tpl" type="text/x-handlebars-template">
-            <ul>
-                <li>Item</li>
-                <li>Item</li>
-                <li>Item</li>
-                <li>Item</li>
-                <li>Item</li>
-                <li>Item</li>
-                <li>Item</li>
-            </ul>
+            <div class="topcoat-navigation-bar">
+                <div class="topcoat-navigation-bar__item center full">
+                    <span class="icon-switch nav-left" id="switch"></span>
+                    <span class="icon-add nav-right" id="add"></span>
+                    <h1 class="logo">PaintKeeper</h1>
+                </div>
+            </div>
+            <h3 class="title">Inventory</h3>
+            <div class="scroller">
+                <ul>
+                    <li>
+                        <strong>Color</strong> <em>Brand name</em>
+                        <br>
+                        <span>Acrylic</span> | <span>12oz</span>
+                    </li>
+                    <li>
+                        <strong>Color</strong> <em>Brand name</em>
+                        <br>
+                        <span>Acrylic</span> | <span>12oz</span>
+                    </li>
+                    <li>
+                        <strong>Color</strong> <em>Brand name</em>
+                        <br>
+                        <span>Acrylic</span> | <span>12oz</span>
+                    </li>
+                    <li>
+                        <strong>Color</strong> <em>Brand name</em>
+                        <br>
+                        <span>Acrylic</span> | <span>12oz</span>
+                    </li>
+                    <li>
+                        <strong>Color</strong> <em>Brand name</em>
+                        <br>
+                        <span>Acrylic</span> | <span>12oz</span>
+                    </li>
+                    <li>
+                        <strong>Color</strong> <em>Brand name</em>
+                        <br>
+                        <span>Acrylic</span> | <span>12oz</span>
+                    </li>
+                    <li>
+                        <strong>Color</strong> <em>Brand name</em>
+                        <br>
+                        <span>Acrylic</span> | <span>12oz</span>
+                    </li>
+                </ul>
+            </div>
         </script>
         <script id="shopping-list-tpl" type="text/x-handlebars-template">
-            <ul>
-                <li>Item</li>
-                <li>Item</li>
-                <li>Item</li>
-                <li>Item</li>
-                <li>Item</li>
-                <li>Item</li>
-                <li>Item</li>
-            </ul>
+            <div class="topcoat-navigation-bar">
+                <div class="topcoat-navigation-bar__item center full">
+                    <span class="icon-switch nav-left" id="switch"></span>
+                    <span class="icon-add nav-right" id="add"></span>
+                    <h1 class="logo">PaintKeeper</h1>
+                </div>
+            </div>
+            <h3 class="title">Shopping List</h3>
+            <div class="scroller">
+                <ul>
+                    <li>
+                        <strong>Color</strong> <em>Brand name</em>
+                        <br>
+                        <span>Acrylic</span> | <span>12oz</span>
+                    </li>
+                    <li>
+                        <strong>Color</strong> <em>Brand name</em>
+                        <br>
+                        <span>Acrylic</span> | <span>12oz</span>
+                    </li>
+                    <li>
+                        <strong>Color</strong> <em>Brand name</em>
+                        <br>
+                        <span>Acrylic</span> | <span>12oz</span>
+                    </li>
+                    <li>
+                        <strong>Color</strong> <em>Brand name</em>
+                        <br>
+                        <span>Acrylic</span> | <span>12oz</span>
+                    </li>
+                    <li>
+                        <strong>Color</strong> <em>Brand name</em>
+                        <br>
+                        <span>Acrylic</span> | <span>12oz</span>
+                    </li>
+                    <li>
+                        <strong>Color</strong> <em>Brand name</em>
+                        <br>
+                        <span>Acrylic</span> | <span>12oz</span>
+                    </li>
+                    <li>
+                        <strong>Color</strong> <em>Brand name</em>
+                        <br>
+                        <span>Acrylic</span> | <span>12oz</span>
+                    </li>
+                </ul>
+            </div>
         </script>
         <script id="add-to-inventory-tpl" type="text/x-handlebars-template">
+            <div class="topcoat-navigation-bar">
+                <div class="topcoat-navigation-bar__item center full">
+                    <h1 class="logo">PaintKeeper</h1>
+                </div>
+            </div>
+            <h3 class="title">Add to Inventory</h3>
             <form role="form">
                 <input type="text" placeholder="Color">
+                <br>
                 <input type="text" placeholder="Brand">
+                <br>
                 <input type="text" placeholder="Type">
+                <br>
                 <input type="text" placeholder="Amount">
-                <button type="submit">Cancel</button>
-                <button type="submit">Save</button>
+                <br>
+                <button type="button" class="cancel">Cancel</button>
+                <button type="button" class="save">Save</button>
             </form>
         </script>
         <script id="ae-shopping-tpl" type="text/x-handlebars-template">
+            <div class="topcoat-navigation-bar">
+                <div class="topcoat-navigation-bar__item center full">
+                    <h1 class="logo">PaintKeeper</h1>
+                </div>
+            </div>
             <form role="form">
                 <input type="text" placeholder="Color">
                 <input type="text" placeholder="Amount">
                 <input type="text" placeholder="Quantity">
-                <button type="submit">Cancel</button>
-                <button type="submit">Save</button>
+                <button type="button" class="cancel">Cancel</button>
+                <button type="button" class="save">Save</button>
             </form>
-        </script>
-        <script id="scan-tpl" type="text/x-handlebars-template">
-
         </script>
         <script id="no-connection-tpl" type="text/x-handlebars-template">
             <div>{{title}}</div>
