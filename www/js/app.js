@@ -94,7 +94,16 @@ var app = {
 
 //primary use case: call an app.router method after collecting results from a database query. use the router to choose display based on number of results returned
     app.router = {
+        inventory: {
+            addEdit: function() {
 
+            }
+        },
+        shopping: {
+            addEdit: function() {
+
+            }
+        }
     };
 
 /* APPLICATION LOCAL STORAGE */
@@ -118,11 +127,40 @@ app.store = {
 
 app.db = {
     initialize: function() {
-        global.db = window.openDatabase('appdb', '1.0', 'AppDB', 5000000);
+        global.db = window.openDatabase('paintkeeper', '1.0', 'PaintKeeperDB', 5000000);
         global.db.transaction(app.db.createDB, app.db.errorCB, app.db.successCB);
     },
     createDB: function(tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS inventory (invid unique, color, brand, ptype, amount)');
+        tx.executeSql('CREATE TABLE IF NOT EXISTS shopping (shopid unique, invid, amount, qty)');
+    },
+    addInv: function(data) {
+        global.db.transaction(function(tx) {
+            tx.executeSql('INSERT INTO inventory (color, brand, ptype, amount) VALUES (?,?,?,?)',data,app.router.inventory.addEdit);
+        },app.db.errorCB);
+    },
+    editInv: function(data) {
+        global.db.transaction(function(tx) {
+            tx.executeSql('UPDATE inventory SET color = ?, brand = ?, ptype = ?, amount = ? WHERE invid = ?',data,app.router.inventory.addEdit);
+        },app.db.errorCB);
+    },
+    deleteInv: function(data) {
+        global.db.transaction(function(tx) {
+            tx.executeSql('DELETE FROM inventory WHERE invid = ?',data,app.router.inventory.addEdit);
+        },app.db.errorCB);
+    },
+    addShopping: function(data) {
+        global.db.transaction(function(tx) {
+            tx.executeSql('INSERT INTO shopping (invid, amount, qty) VALUES (?,?,?)',data,app.router.shopping.addEdit);
+        },app.db.errorCB);
+    },
+    editShopping: function(data) {
 
+    },
+    removeShopping: function(data) {
+        global.db.transaction(function(tx) {
+            tx.executeSql('DELETE FROM shopping WHERE shopid = ?',data,app.router.shopping.addEdit);
+        },app.db.errorCB);
     },
     errorCB: function(tx, err) {
         //console.log(err);
