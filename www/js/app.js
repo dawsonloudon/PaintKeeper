@@ -182,6 +182,10 @@ app.helpers = {
     //all templates need to be registered here
     app.tpl = {
         default: Handlebars.compile($('#default-tpl').html()),
+        shopping: Handlebars.compile($('#shopping-list-tpl').html()),
+        addToInventory: Handlebars.compile($('#add-to-inventory-tpl').html()),
+        aeShopping: Handlebars.compile($('#ae-shopping-tpl').html()),
+        scan: Handlebars.compile($('#scan-tpl').html()),
         noConnection: Handlebars.compile($('#no-connection-tpl').html())
     };
 

@@ -8,15 +8,60 @@
         <link href="assets/css/global.css" rel="stylesheet">
     </head>
     <body>
-        <div id="menu">
-
+        <div class="topcoat-navigation-bar">
+            <div class="topcoat-navigation-bar__item center full">
+                <span class="icon-switch nav-right"></span>
+                <h1>PaintKeeper</h1>
+                <span class="icon-add nav-left"></span>
+            </div>
         </div>
         <div id="container">
 
         </div>
         <!-- TEMPLATES BEGIN -->
         <script id="default-tpl" type="text/x-handlebars-template">
-            <div>{{title}}</div>
+            <ul>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+            </ul>
+        </script>
+        <script id="shopping-list-tpl" type="text/x-handlebars-template">
+            <ul>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+            </ul>
+        </script>
+        <script id="add-to-inventory-tpl" type="text/x-handlebars-template">
+            <form role="form">
+                <input type="text" placeholder="Color">
+                <input type="text" placeholder="Brand">
+                <input type="text" placeholder="Type">
+                <input type="text" placeholder="Amount">
+                <button type="submit">Cancel</button>
+                <button type="submit">Save</button>
+            </form>
+        </script>
+        <script id="ae-shopping-tpl" type="text/x-handlebars-template">
+            <form role="form">
+                <input type="text" placeholder="Color">
+                <input type="text" placeholder="Amount">
+                <input type="text" placeholder="Quantity">
+                <button type="submit">Cancel</button>
+                <button type="submit">Save</button>
+            </form>
+        </script>
+        <script id="scan-tpl" type="text/x-handlebars-template">
+
         </script>
         <script id="no-connection-tpl" type="text/x-handlebars-template">
             <div>{{title}}</div>
